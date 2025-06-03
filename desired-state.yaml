@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: new-app-deployment
+  name: grocery-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: new-app
+      app: grocery
   template:
     metadata:
       labels:
-        app: new-app
+        app: grocery
     spec:
       containers:
-      - name: new-app-container
+      - name: grocery-container
         image: nginx:1.25
